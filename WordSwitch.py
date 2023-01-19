@@ -2,12 +2,12 @@ import docx
 import os
 
 # The keyword you want to replace
-old_keyword = 'old'
+old_keyword = 'OLD'
 # The new keyword you want to use
-new_keyword = 'new'
+new_keyword = 'NEW'
 
 # Specify the directory containing the .docx files
-directory = r'C:\FileLocation\WordSwitch\From'
+directory = r'C:\~FILEPATH~\Wordswitch\FROM'
 
 # Iterate through all files in the directory
 for filename in os.listdir(directory):
@@ -22,6 +22,6 @@ for filename in os.listdir(directory):
             p.text = p.text.replace(old_keyword, new_keyword)
 
         # Save the changes to the .docx file
-        doc.save(os.path.join(r'C:\FileLocation\WordSwitch\to', filename))
+        doc.save(os.path.join(r'C:\~FILEPATH~\Wordswitch\TO', filename))
 
 print("WordSwitched!")
